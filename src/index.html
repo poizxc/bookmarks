@@ -2,12 +2,42 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>Project</title>
+	<title>bookmarks</title>
 	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-test
-<script src="/js/main.js"></script>
+	<div class="container">
+  <div class="row">
+   <div class="col-sm-12 ">
+      <form class="jumbotron" id="add-bookmark">
+  <div class="form-group ">
+    <label for="website"><h4>website name</h4></label>
+    <input type="text" required class="form-control" id="website" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="website-url"><h4>website url</h4></label>
+    <input type="url" required class="form-control" id="website-url" placeholder="website url">
+  </div>
+  <div class="form-group">
+  	<h4>type of bookmark</h4> 
+    <input required type="radio" class="form-radio-input" name=type-of-bookmark id="type-knowledge" value="knowledge">
+    <label class="form-check-label" for="type-knowledge">knowledge</label>
+    <input required type="radio" class="form-radio-input" name=type-of-bookmark id="type-fun" value="fun">
+    <label class="form-check-label" for="type-fun">fun</label>
+    <input required type="radio" class="form-radio-input" name=type-of-bookmark id="type-other"  value="other">
+    <label class="form-check-label" for="type-other">other</label>
+  </div>
+  <button type=submit id="push" class="btn btn-primary">Submit</button>
+  <button  id="reset" class="btn btn-primary">reset</button>
+</form>
+    </div>
+    <div class="col-sm-12" id="bookmarks">
+    	
+    </div>
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
 </body>
 </html>
